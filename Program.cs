@@ -17,7 +17,7 @@ namespace work_with_cvs
             try
             {
                 List<workWithCsv.lenghtValues> lv = new List<workWithCsv.lenghtValues>();
-                workWithCsv.getData("dataLenght.csv", lv);
+                workWithCsv.getData("dataLenght.csv", lv) ;
                 List<workWithCsv.lenghtValues> newLV = calcAllValues(lv);
                 workWithCsv.inputData("dataLenght.csv", newLV);
 
@@ -26,6 +26,7 @@ namespace work_with_cvs
             catch
             {
                 Console.WriteLine("Поймано исключение");
+                Console.WriteLine("Необходимо поместить файл dataLength в Debug или верно указать относительный путь");
             }
             Console.ReadKey();
         }
